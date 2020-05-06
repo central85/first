@@ -1,0 +1,110 @@
+*{              /*css에서 *은 모든 태그를 의미, #은 선택자id, .은 class*/
+    box-sizing: border-box;
+}
+
+
+/* 선택자(selector) */
+div#header-center {  /*css에서 #은 html의 id역할, div#... 여러개를 콤마로 구분해서 동시적용가능*/
+margin: 0 auto;     /*div는 워낙 흔히써서 생략하고 이용해도 됨*/
+width: 1080px;
+
+}
+
+#header-search > h1 {  /*선택자로 header-search div의 h1 자식 태그를 선택함. 자식은 >를 이용. h1 태그에 id를 다는 방법도 있음*/
+width: 280px;      /*header-center로 부터 찾을 수 있는데 이때 h1은 자손에 해당하고 #header-center h1 으로 선택자이용하면 됨. 한칸띄고 h1을 적음.*/
+display: inline-block; /*margine을 없앰. margine에는 아무것도 못들어감.*/
+}
+
+#header-center h2{
+    display: none;  /* 화면에 표시하지 않음. 시각장애 화면읽기에도 안나옴. 검색엔진에 검색될수 있음 */
+}
+
+#header-center fieldset{
+    width: 520px;
+    display: inline-block;  /* 같은 div안에서 자손들의 width의 합이 부모보다 작음. 횡으로 정렬됨. 강제로 margine에 태그를 넣을수도 있음(position) */
+}
+
+/* #대신 .으로 시작하면 class임 */
+
+.blind{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+
+#header-search h1{
+    width: 198px;
+    height: 48px;
+    display: inline-block;
+    background-image: url(./sp_search.png);
+    background-position: -4px -4px;
+    vertical-align: middle;       /*시블링끼리 횡정렬 동일로 묶어줌*/
+    position: relative;
+    top: -5px;
+
+    
+    /*text-indent: 100%;
+    overflow: hidden;*/
+
+}
+#header-search span{
+    display: none;
+}
+
+#header-search fieldset{
+    margin-left: 20px;
+    padding: 12px 0px 12px 10px;
+    /*padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 0px;*/
+    border: 2px solid #03cf5d;
+    /*border-top: 2px solid #03cf5d;
+    border-right: 2px solid #03cf5d;
+    border-bottom: 2px solid #03cf5d;
+    border-left: 2px solid #03cf5d;*/
+    width: 521px;
+    height: 49px;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;       /*시블링끼리 횡정렬 동일로 묶어줌*/
+    position: relative;
+}
+
+#header-search fieldset input{
+    border: none;
+    padding: 0;
+    outline: none;
+    vertical-align: top;
+    width: 405px;
+    height: 23px
+   
+}
+
+#header-search fieldset button{
+    width: 49px;
+    height: 49px;
+    border: none;
+    padding: 0;
+ 
+    background: #03cf5d;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+
+}
+
+span#search-image {
+    background-image: url(./sp_search.png);
+    background-position: -3px -60px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    margin: 14px;
+
+}
